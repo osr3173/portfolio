@@ -139,13 +139,13 @@ const Projects: React.FC = () => {
     {
       title: "밀키트 판매 매장 검색 사이트",
       category: "Web",
-      imageUrl: "/mealkit.jpg",
+      imageUrl: `${process.env.PUBLIC_URL}/mealkit.jpg`,
       description: "WeB",
     },
     {
       title: "외국인 여행 트렌트 동향 분석",
       category: "Data-Analysis",
-      imageUrl: "/shop.jpg",
+      imageUrl: `${process.env.PUBLIC_URL}/shop.jpg`,
       description: "Data-Analysis",
     },
   ].filter(
