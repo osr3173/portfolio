@@ -55,7 +55,7 @@ const Modal: React.FC<{ projectTitle: string; onClose: () => void }> = ({
             <p className="mb-6">
               <strong className="text-black">개요 :</strong>{" "}
               <p className="flex text-black">
-                밀키트 판매 매장을 추천해주는 사이트 구현
+                밀키트 판매 매장을 검색 사이트 구현
               </p>
             </p>
 
