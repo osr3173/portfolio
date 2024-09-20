@@ -12,7 +12,7 @@ const Introduce: React.FC = () => {
         {/* 좌측 사진 */}
         <div className="w-64 md:w-80">
           <img
-            src={`${process.env.PUBLIC_URL}/img.jpg`}
+            src={`${process.env.PUBLIC_URL}/profile.jpg`}
             alt="Profile"
             className="w-full h-auto object-cover rounded-lg"
           />
