@@ -161,7 +161,7 @@ const Projects: React.FC = () => {
 
       <div className="space-y-16 max-w-screen-lg w-full pt-24">
         {/* 카테고리 필터 */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8 mr-52">
           {["All", "Data-Analysis", "Web", "Others"].map((category) => (
             <button
               key={category}
