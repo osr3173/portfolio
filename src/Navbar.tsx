@@ -7,9 +7,10 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
   const getClassName = (section: "Main" | "Introduce" | "Projects" | "History") => {
+    // 선택된 항목은 짙은 검정색으로, 비선택 항목은 회색으로 설정
     return currentPage === section
-      ? "text-white font-bold"
-      : "text-gray-400 hover:text-white";
+      ? "text-[#000000] font-bold" // 선택된 항목은 검정색
+      : "text-[#333333] hover:text-[#000000]"; // 비선택 항목은 짙은 회색
   };
 
   return (
