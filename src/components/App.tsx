@@ -10,7 +10,9 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<"Main" | "Introduce" | "Projects" | "History">("Main");
+  const [currentPage, setCurrentPage] = useState<
+    "Main" | "Introduce" | "Projects" | "History"
+  >("Main");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +29,10 @@ const App: React.FC = () => {
         setCurrentPage("Projects");
       } else if (scrollPosition >= sections.History + window.innerHeight / 4) {
         setCurrentPage("History");
-      } else if (scrollPosition >= sections.Introduce + window.innerHeight / 4) {
+      } else if (
+        scrollPosition >=
+        sections.Introduce + window.innerHeight / 4
+      ) {
         setCurrentPage("Introduce");
       } else {
         setCurrentPage("Main");
@@ -41,7 +46,9 @@ const App: React.FC = () => {
     };
   }, []);
 
-  const handlePageTransition = (section: "Main" | "Introduce" | "History" | "Projects") => {
+  const handlePageTransition = (
+    section: "Main" | "Introduce" | "History" | "Projects"
+  ) => {
     setCurrentPage(section); // 현재 페이지 상태 업데이트
 
     const sectionPositions = {

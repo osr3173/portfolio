@@ -82,10 +82,10 @@ const Modal: React.FC<{ projectTitle: string; onClose: () => void }> = ({
         )}
 
         {/* 외국인 여행 트렌드 동향 분석 */}
-        {projectTitle === "외국인 여행 트렌트 동향 분석" && (
+        {projectTitle === "외국인 여행 트렌드 동향 분석" && (
           <>
             <h2 className="text-3xl font-bold mb-6 text-gray-800">
-              외국인 여행 트렌트 동향 분석
+              외국인 여행 트렌드 동향 분석
             </h2>
 
             <p className="mb-4">
@@ -102,25 +102,75 @@ const Modal: React.FC<{ projectTitle: string; onClose: () => void }> = ({
 
             <p className="mb-6">
               <strong className="text-black">개요 :</strong>
-              <p className="flex text-black">
-                <ul className="list-disc ml-6 mt-2 text-black">
-                  <li>외국인의 국내 여행 트렌드 분석</li>
-                  <li>여행 및 관광 데이터 분석</li>
-                  <li>
-                    가설 검증을 통한 여행 동향 분석 및 관광 활성화 정책 제안
-                  </li>
-                </ul>
-              </p>
+              <ul className="list-disc ml-6 mt-2 text-black">
+                <li>외국인의 국내 여행 트렌드 분석</li>
+                <li>여행 및 관광 데이터 분석</li>
+                <li>
+                  가설 검증을 통한 여행 동향 분석 및 관광 활성화 정책 제안
+                </li>
+              </ul>
             </p>
-
-            <div className="mb-6"></div>
 
             <div>
               <strong className="text-black">개발 환경 :</strong>
               <ul className="list-disc ml-6 mt-2 text-black">
                 <li>언어 : Python</li>
-                <li>라이브러리 : numpy, matplotlib</li>
+                <li>라이브러리 : numpy, Seaborn, matplotlib</li>
                 <li>도구 : VScode, Canva</li>
+              </ul>
+            </div>
+          </>
+        )}
+
+        {/* 포트폴리오 사이트 구현 */}
+        {projectTitle === "포트폴리오 사이트 구현" && (
+          <>
+            <h2 className="text-3xl font-bold mb-6 text-gray-800">
+              포트폴리오 사이트 구현
+            </h2>
+
+            <p className="mb-4">
+              <strong className="text-gray-800">사이트 :</strong>{" "}
+              <a
+                href="https://osr3173.github.io/portfolio/"
+                className="text-blue-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Link
+              </a>
+            </p>
+
+            <p className="mb-4">
+              <strong className="text-gray-800">코드 :</strong>{" "}
+              <a
+                href="https://github.com/osr3173/portfolio"
+                className="text-blue-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Link
+              </a>
+            </p>
+
+            <p className="mb-6">
+              <strong className="text-black">개요 :</strong>{" "}
+              <ul className="list-disc ml-6 mt-2 text-black">
+                <li>포트폴리오 사이트 구현</li>
+                <li>사용자 경험성을 고려한 수정사항 반영</li>
+                <li>
+                  디자인 수정을 통해 신뢰도 있는 이미지 구축하고 포트폴리오의
+                  장점이 부각되게 함
+                </li>
+              </ul>
+            </p>
+
+            <div>
+              <strong className="text-black">개발 환경 :</strong>
+              <ul className="list-disc ml-6 mt-2 text-black">
+                <li>Front : React, HTML, tailwindCSS</li>
+                <li>배포 환경 : github</li>
+                <li>도구 : VScode</li>
               </ul>
             </div>
           </>
@@ -132,55 +182,40 @@ const Modal: React.FC<{ projectTitle: string; onClose: () => void }> = ({
 
 const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
-  const [activeCategory, setActiveCategory] = useState<string>("All");
 
-  // 직접 입력된 프로젝트 데이터에 기반한 필터링 로직
-  const filteredProjects = [
+  // 프로젝트 데이터
+  const projects = [
     {
       title: "밀키트 판매 매장 검색 사이트",
-      category: "Web",
       imageUrl: `${process.env.PUBLIC_URL}/mealkit.jpg`,
-      description: "WeB",
+      description: "Web",
     },
     {
-      title: "외국인 여행 트렌트 동향 분석",
-      category: "Data-Analysis",
+      title: "외국인 여행 트렌드 동향 분석",
       imageUrl: `${process.env.PUBLIC_URL}/shop.jpg`,
       description: "Data-Analysis",
     },
-  ].filter(
-    (project) => activeCategory === "All" || project.category === activeCategory
-  );
+    {
+      title: "포트폴리오 사이트 구현",
+      imageUrl: `${process.env.PUBLIC_URL}/port.png`,
+      description: "Web",
+    },
+  ];
 
   return (
-    <div className="relative min-h-screen bg-gray-900 text-gray-300 py-12 px-6 md:px-8 lg:pl-[250px] flex justify-center">
+    <div className="relative min-h-screen bg-[#E6F0FA] text-[#333333] py-12 px-6 md:px-8 lg:pl-[250px] flex justify-center">
       {/* 상단 Projects 제목 */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-5xl font-bold">
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-[#1E40AF] text-5xl font-bold">
         Featured Projects
       </div>
 
       <div className="space-y-16 max-w-screen-lg w-full pt-24">
-        {/* 카테고리 필터 */}
-        <div className="flex justify-center mb-8 mr-52">
-          {["All", "Data-Analysis", "Web", "Others"].map((category) => (
-            <button
-              key={category}
-              className={`mx-2 px-4 py-2 ${
-                activeCategory === category ? "text-green-400" : "text-white"
-              }`}
-              onClick={() => setActiveCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        {/* 직접 입력된 프로젝트 카드 */}
+        {/* 프로젝트 카드 */}
         <div className="grid md:grid-cols-3 gap-6">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-800 p-6 rounded-lg shadow-md h-full cursor-pointer"
+              className="bg-[#FFFFFF] p-6 rounded-lg shadow-md h-full cursor-pointer"
               onClick={() => setSelectedProject(project.title)} // 프로젝트 클릭 시 모달 오픈
             >
               <img
@@ -188,10 +223,10 @@ const Projects: React.FC = () => {
                 alt={project.title}
                 className="w-full h-48 object-cover rounded-md mb-4"
               />
-              <h2 className="text-center text-2xl font-bold mb-2">
+              <h2 className="text-center text-2xl font-bold text-[#3B82F6] mb-2">
                 {project.title}
               </h2>
-              <p className="text-center text-green-400 mb-2">
+              <p className="text-center text-[#1E40AF] mb-2">
                 {project.description}
               </p>
             </div>
