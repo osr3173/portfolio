@@ -76,6 +76,46 @@ const History: React.FC = () => {
               <li>오픈소스 프로젝트</li>
             </ul>
           </div>
+
+          <div className="bg-[#FFFFFF] p-6 rounded-lg shadow-md h-full">
+            <p className="text-sm text-gray-400 mb-2">2024 / 01 - 2024 / 02</p>
+            <h3 className="text-2xl font-semibold text-[#3B82F6]">
+              Data Science Project 2024
+            </h3>
+            <ul className="list-disc ml-4 pt-2">
+              <li>부스트코스 주관 데이터 분석 프로젝트</li>
+              <li>
+                python, Slack, github 등을 활용한 데이터 분석 학습 및 프로젝트
+                수행
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-[#FFFFFF] p-6 rounded-lg shadow-md h-full">
+            <p className="text-sm text-gray-400 mb-2">2023 / 04 - 2023 / 05</p>
+            <h3 className="text-2xl font-semibold text-[#3B82F6]">
+              2023 상반기 CIPC 특허 빅데이터 교육
+            </h3>
+            <ul className="list-disc ml-4 pt-2">
+              <li>
+                특허 데이터를 분석을 바탕으로 인사이트 도출하는 과정 교육{" "}
+              </li>
+              <li>특허식 작성 및 시각화툴 등 사용법 교육</li>
+            </ul>
+          </div>
+
+          <div className="bg-[#FFFFFF] p-6 rounded-lg shadow-md h-full">
+            <p className="text-sm text-gray-400 mb-2">2022 / 03 - 2022 / 06</p>
+            <h3 className="text-2xl font-semibold text-[#3B82F6]">
+              2022 상반기 CIPC 특허 빅데이터 교육
+            </h3>
+            <ul className="list-disc ml-4 pt-2">
+              <li>
+                특허 데이터를 분석을 바탕으로 인사이트 도출하는 과정 교육{" "}
+              </li>
+              <li>특허식 작성 및 시각화툴 등 사용법 교육</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
