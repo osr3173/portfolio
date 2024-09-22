@@ -4,7 +4,7 @@ const History: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-[#E6F0FA] text-[#333333] py-12 px-6 md:px-8 lg:pl-[250px] flex justify-center">
       {/* 상단 History 제목 */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-[#1E40AF] text-5xl font-bold">
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-[#1E40AF] text-5xl font-bold ml-2">
         History
       </div>
 
@@ -60,7 +60,7 @@ const History: React.FC = () => {
             <ul className="list-disc ml-4 pt-2">
               <li>부스트코스 주관 데이터 분석 프로젝트</li>
               <li>
-                python, Slack 등을 활용한 데이터 분석 학습 및 프로젝트 수행
+                Python, Slack 등을 활용한 데이터 분석 학습 및 프로젝트 수행
               </li>
             </ul>
           </div>
@@ -85,7 +85,7 @@ const History: React.FC = () => {
             <ul className="list-disc ml-4 pt-2">
               <li>부스트코스 주관 데이터 분석 프로젝트</li>
               <li>
-                python, Slack, github 등을 활용한 데이터 분석 학습 및 프로젝트
+                Python, Slack, github 등을 활용한 데이터 분석 학습 및 프로젝트
                 수행
               </li>
             </ul>

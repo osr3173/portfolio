@@ -205,7 +205,7 @@ const Projects: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-[#E6F0FA] text-[#333333] py-12 px-6 md:px-8 lg:pl-[250px] flex justify-center">
       {/* 상단 Projects 제목 */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-[#1E40AF] text-5xl font-bold">
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-[#1E40AF] text-5xl font-bold ml-4">
         Featured Projects
       </div>
 
