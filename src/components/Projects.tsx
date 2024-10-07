@@ -175,6 +175,47 @@ const Modal: React.FC<{ projectTitle: string; onClose: () => void }> = ({
             </div>
           </>
         )}
+        {/* 밀키트 판매 매장 검색 사이트 */}
+        {projectTitle === "대출 승인 예측" && (
+          <>
+            <h2 className="text-3xl font-bold mb-6 text-gray-800">
+              대출 승인 예측
+            </h2>
+
+            <p className="mb-4">
+              <strong className="text-gray-800">사이트 :</strong>{" "}
+              <a
+                href="https://www.kaggle.com/code/osr3173/loan-approval-prediction-ver-3"
+                className="text-blue-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Link
+              </a>
+            </p>
+
+            <p className="mb-6">
+              <strong className="text-black">개요 :</strong>{" "}
+              <p className="flex text-black">
+                신용 관련 데이터를 통해 대출 승인 여부 예측
+              </p>
+            </p>
+
+            <div className="mb-6">
+              <strong className="text-black">상세 내용 :</strong>
+              <p className="flex text-black">
+                고객 데이터를 기반으로 대출 승인 여부를 예측하기 위해 소득,
+                나이, 대출등의 요소들을 고려한다. 고객의 연간 소득 및 직장 근속
+                연수, 주택 소유 여부 등의 변수와 변수간의 상관관계를 파악하고
+                이를 바탕으로 모델을 학습한다. <br></br>데이터의 불균형을 고려해
+                SMOTE를 사용했고 분류 모델은 로지스틱 회귀, 랜덤 포레스트,
+                xgboost등의 다양한 모델을 한번에 학습한 후 점수가 가장 높은{" "}
+                <br /> xgboost 모델을 사용했다. 결과는 0.87458점으로 꽤 높은
+                점수를 얻었다.
+              </p>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
@@ -199,6 +240,11 @@ const Projects: React.FC = () => {
       title: "포트폴리오 사이트 구현",
       imageUrl: `${process.env.PUBLIC_URL}/port.png`,
       description: "Web",
+    },
+    {
+      title: "대출 승인 예측",
+      imageUrl: `${process.env.PUBLIC_URL}/loan.jpg`,
+      description: "Data-Analysis",
     },
   ];
 
