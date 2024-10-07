@@ -29,10 +29,7 @@ const App: React.FC = () => {
         setCurrentPage("Projects");
       } else if (scrollPosition >= sections.History + window.innerHeight / 4) {
         setCurrentPage("History");
-      } else if (
-        scrollPosition >=
-        sections.Introduce + window.innerHeight / 4
-      ) {
+      } else if (scrollPosition >= sections.Introduce + window.innerHeight / 4) {
         setCurrentPage("Introduce");
       } else {
         setCurrentPage("Main");
@@ -49,7 +46,7 @@ const App: React.FC = () => {
   const handlePageTransition = (
     section: "Main" | "Introduce" | "History" | "Projects"
   ) => {
-    setCurrentPage(section); // 현재 페이지 상태 업데이트
+    setCurrentPage(section);
 
     const sectionPositions = {
       Main: document.getElementById("Main")?.offsetTop || 0,
@@ -69,7 +66,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
       <Navbar onNavigate={handlePageTransition} currentPage={currentPage} />
       <div className="flex-grow">
         <section id="Main" className="min-h-screen">
