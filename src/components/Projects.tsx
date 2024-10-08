@@ -174,7 +174,7 @@ const Modal: React.FC<{ projectTitle: string; onClose: () => void }> = ({
             <p className="mb-6">
               <strong className="text-black">개요 :</strong>{" "}
               <p className="flex text-black">
-                신용 관련 데이터를 통해 대출 승인 여부를 예측
+                신용 관련 데이터 분석을 통한 대출 승인 여부를 예측
               </p>
             </p>
 
@@ -182,13 +182,14 @@ const Modal: React.FC<{ projectTitle: string; onClose: () => void }> = ({
               <strong className="text-black">상세 내용 :</strong>
               <p className="flex text-black">
                 고객 데이터를 기반으로 대출 승인 여부를 예측하기 위해 소득,
-                나이, 대출등의 요소들을 고려한다. 고객의 연간 소득 및 직장 근속
-                연수, 주택 소유 여부 등의 변수와 변수간의 상관관계를 파악하고
-                이를 바탕으로 모델을 학습한다. <br></br>데이터의 불균형을 고려해
-                SMOTE를 사용했고 분류 모델은 로지스틱 회귀, 랜덤 포레스트,
-                xgboost등의 다양한 모델을 한번에 학습한 후 점수가 가장 높은{" "}
-                <br /> xgboost 모델을 사용했다. 결과는 0.87458점으로 꽤 높은
-                점수를 얻었다.
+                나이, 대출등의 요소들을 고려했습니다. 고객의 연간 소득 및 직장
+                근속 연수, 주택 소유 여부 등의 변수와 변수간의 상관관계를
+                파악하고 이를 바탕으로 모델을 학습했습니다. <br></br>데이터의
+                불균형을 고려해 SMOTE를 사용했고 분류 모델은 로지스틱 회귀, 랜덤
+                포레스트, xgboost등의 다양한 모델을 한번에 학습한 후 점수가 가장
+                높은 <br /> xgboost 모델을 사용했습니다. 결과는 0.87458점으로 꽤
+                높은 점수가 나왔고 모델 성능 향상을 위한 수정을 추후 진행할
+                예정입니다.
               </p>
             </div>
           </>
