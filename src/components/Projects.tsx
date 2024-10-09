@@ -163,7 +163,7 @@ const Modal: React.FC<{ projectTitle: string; onClose: () => void }> = ({
             <p className="mb-4">
               <strong className="text-gray-800">사이트 :</strong>{" "}
               <a
-                href="https://www.kaggle.com/code/osr3173/loan-approval-prediction-ver-3"
+                href="https://www.kaggle.com/code/osr3173/loan-approval-prediction-edited/edit"
                 className="text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
